@@ -9,27 +9,49 @@ public class CourseTrot {
 
 	public static void main(String[] args) {
 
-		// créer tableau des chevaux 
-			
+
+		int speed
+		int distance;
+
+		public Horse() {
+			this.speed = 0;
+			this.distance = 0;
+		}
+
+
 
 		//speed += evol;
 		//for (i = 0; i < 20; i++) 
 		//speed = horses[i];
 
 
-		//System.out.println("les chevaux avancent de " + de );
-		
-	
-
+		// Initialiser le tableau des chevaux
+		public static int horse () {
+			horse[] horses = new horse[20];
+			for (int i = 0; i < horses.length; i++) {
+				horses[i] = new horse();
+			}
 		}
-		
+
+
+
+
+
+
+	}
 	//lancer de dé	
 	public static int dice () {
-	return (int) (Math.random()*6+1);
-
-	
+		for (int i = 0; i < horses.length; i++) {
+			int d = dice ();
+			int newSpeed = addSpeed(horses[i].speed, de);
+			horses[i].newDistance += newSpeed;
+			horses[i].speed = newSpeed;
+		}
+		return (int) (Math.random()*6+1);
 	}
-		
+
+
+
 	public static int addSpeed (int currentSpeed, int d){
 		int[][] speed = {  
 				{0,1,1,1,2,2},//0
@@ -45,35 +67,10 @@ public class CourseTrot {
 
 
 	}	
-	// générer un nombre 
-public static Set <Integer> horseRace() {
-	Random random = new Random();
-// le set est une collection qui permet de ne pas faire de doublon on s'assure que chaque numéro de cheval est unique
-	Set < Integer> horse = new HashSet<>();//HashSet stocke des éléments et permet d'ajouter et de suprimer ce qui a déjà été suggéré par la méthode random
-//selectionner 3 chevaux
-	while (horse.size() <3) {
-		int randomNumber =random.nextInt(20)+1;
-		horse.add(randomNumber);
-			
-	}
-	return horse;
-}
-		
-public static void showResult(Set<Integer>horse) {
-//iterator permet de parcourir les éléments du HashSet des horses et les affiches. Sans cela ça ne fonctionne pas
-	Iterator<Integer>iterator = horse.iterator();
-	while (iterator.hasNext()){
-		int horseWin = iterator.next();
-		System.out.println("les chevaux " + horseWin + "" + "ont gagné la course");
-	}
-		
-	
-}
-	
+
 }
 
-
-//créer des chevaux 
+//créer des chevaux - ok
 // créer "un plateau avec des "distances"
 // créer un dés qui annonce la vitesse 
-// faire que les 3 premiers chevaux qui arrivent gagnent.- 
+// faire que les 3 premiers chevaux qui arrivent gagnent.- ok
